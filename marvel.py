@@ -1,3 +1,13 @@
+from PIL import Image
+
+image0 = Image.open("image0.jpg")
+image1 = Image.open("image1.jpg")
+image2 = Image.open("image2.jpg")
+image3 = Image.open("image3.jpg")
+
+
+# image0.show()
+
 # this function for new marvel game
 def new_round():
     guesses = []
@@ -22,7 +32,31 @@ def check_marvel_answer(answer, guess):
 
     if answer == guess:
         print("CORRECT!")
-        return 1
+        # return 1
+        if answer == "D":
+            print('correct one')
+            image0 = Image.open("image0.jpg")
+            image0.show()
+            return 1
+        elif answer == "C":
+            print('correct two')
+            image0 = Image.open("image0.jpg")
+            image0.show()
+
+            return 1
+        elif answer == "B":
+            print('correct Three')               
+            image0 = Image.open("image0.jpg")
+            image0.show()
+
+            return 1
+        else:
+            print('corren four')
+            image0 = Image.open("image0.jpg")
+            image0.show()
+
+            return 1
+   
     else:
         print("WRONG!")
         return 0
@@ -68,8 +102,8 @@ questions = {
 
 options = [["A. Wolverine", "B. Spider-Man","C. Thor", "D. Hulk"],
           ["A. Captain America", "B. Daredevil","C. Spider-Man.", "D. Punisher"],
-          ["A. Nightcrawler", "B. Iron Man","C. Ice Man", "Colossus"],
-          ["A. Deadpool", "B. Spider-Man","C. Silver Surfer", "Gambit"]]
+          ["A. Nightcrawler", "B. Iron Man","C. Ice Man", "D. Colossus"],
+          ["A. Deadpool", "B. Spider-Man","C. Silver Surfer", "D. Gambit"]]
 
 # This fucntion for a new game
 new_round()
@@ -78,5 +112,3 @@ while new_game():
     new_round()
 
 print("Byeeeeee!")
-
-
