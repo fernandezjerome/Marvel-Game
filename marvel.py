@@ -1,34 +1,82 @@
-
-
-
 # this function for new marvel game
-def new_marvelgame():
-    pass
+def new_round():
+    guesses = []
+    correct_guesses = 0
+    question_num = 1
+    for key in questions:
+        print("-------------------------")
+        print(key)
+        for i in options[question_num-1]:
+            print(i)
+        guess = input("Enter (A, B, C, or D): ")
+        guess = guess.upper()
+        guesses.append(guess)
+
+        correct_guesses += check_marvel_answer(questions.get(key), guess)
+        question_num += 1
+
+    display_percent_score(correct_guesses, guesses)
 
 # this function  will determine if the answers were correct
-def check_marvelanswer():
-    pass
+def check_marvel_answer(answer, guess):
+
+    if answer == guess:
+        print("CORRECT!")
+        return 1
+    else:
+        print("WRONG!")
+        return 0
 
 # this function will show the scores
-def show_score():
-    pass
+def display_percent_score(correct_guesses, guesses):
+    print("-------------------------")
+    print("RESULTS")
+    print("-------------------------")
+
+    print("Answers: ", end="")
+    for i in questions:
+        print(questions.get(i), end=" ")
+    print()
+
+    print("Guesses: ", end="")
+    for i in guesses:
+        print(i, end=" ")
+    print()
+
+    score = int((correct_guesses/len(questions))*100)
+    print("Your score is: "+str(score)+"%")
 
 # this fuction will ask the player if you will play again
-def play_again():
-    pass
+def new_game():
+
+    response = input("Do you want to play again? (yes or no): ")
+    response = response.upper()
+
+    if response == "YES":
+        return True
+    else:
+        return False
 
 
-
-
-
-questiion = {
+questions = {
 "who is a Marvel character who's alter ego in a nuclear scientist? ": "D",
 "This character played by Tom Holland? ": "C",
 "who's the richest character in Marvel'? ": "B",
 "He's a disfigured mercenary with the superhuman ability of regeneration and physical prowess? ": "A",
 }
 
-option = [["A. Wolverine", "B. Spider-Man","C. Thor", "D. Hulk"],
+
+options = [["A. Wolverine", "B. Spider-Man","C. Thor", "D. Hulk"],
           ["A. Captain America", "B. Daredevil","C. Spider-Man.", "D. Punisher"],
-          ["A. Nightcrawler", "B. Iron Man","C. Ice Man", "Colossus"],          
+          ["A. Nightcrawler", "B. Iron Man","C. Ice Man", "Colossus"],
           ["A. Deadpool", "B. Spider-Man","C. Silver Surfer", "Gambit"]]
+
+# This fucntion for a new game
+new_round()
+
+while new_game():
+    new_round()
+
+print("Byeeeeee!")
+
+
