@@ -1,3 +1,4 @@
+from gameComponents import gameQuestions
 from PIL import Image
 import time
 
@@ -5,16 +6,16 @@ def new_round(): # this function for new marvel game
     guesses = []
     correct_guesses = 0
     question_num = 1
-    for key in questions:
-        print("-------------------------")
+    for key in gameQuestions.questions:
+        print('-----------------------')
         print(key)
-        for i in options[question_num-1]:
+        for i in gameQuestions.options[question_num-1]:
             print(i)
         guess = input("Enter (A, B, C, or D): ")
         guess = guess.upper()
         guesses.append(guess)
 
-        correct_guesses += check_marvel_answer(questions.get(key), guess)
+        correct_guesses += check_marvel_answer(gameQuestions.questions.get(key), guess)
         question_num += 1
 
     display_percent_score(correct_guesses, guesses)
@@ -53,8 +54,8 @@ def display_percent_score(correct_guesses, guesses):
     print("-------------------------")
 
     print("Answers: ", end="")
-    for i in questions:
-        print(questions.get(i), end=" ")
+    for i in gameQuestions.questions:
+        print(gameQuestions.questions.get(i), end=" ")
     print()
 
     print("Guesses: ", end="")
@@ -62,7 +63,7 @@ def display_percent_score(correct_guesses, guesses):
         print(i, end=" ")
     print()
 
-    score = int((correct_guesses/len(questions))*100)
+    score = int((correct_guesses/len(gameQuestions.questions))*100)
     print("Your score is: "+str(score)+"%")
     if correct_guesses == 1:
         twen = Image.open("img/20.jpg")
@@ -98,22 +99,6 @@ def new_game():
         return True
     else:
         return False
-
-
-questions = {
-"who is a Marvel character who's alter ego in a nuclear scientist? ": "D",
-"This character played by Tom Holland? ": "C",
-"who's the richest character in Marvel'? ": "B",
-"He's a disfigured mercenary with the superhuman ability of regeneration and physical prowess? ": "A",
-"tesslkdflksdfj": "B",
-}
-
-
-options = [["A. Wolverine", "B. Spider-Man","C. Thor", "D. Hulk"],
-          ["A. Captain America", "B. Daredevil","C. Spider-Man.", "D. Punisher"],
-          ["A. Nightcrawler", "B. Iron Man","C. Ice Man", "D. Colossus"],
-          ["A. Nightcrawler", "B. Iron Man","C. Ice Man", "D. Colossus"],
-          ["A. Deadpool", "B. Spider-Man","C. Silver Surfer", "D. Gambit"]]
 
 # This fucntion for a new game
 new_round()
