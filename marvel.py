@@ -1,15 +1,7 @@
 from PIL import Image
+import time
 
-image0 = Image.open("image0.jpg")
-image1 = Image.open("image1.jpg")
-image2 = Image.open("image2.jpg")
-image3 = Image.open("image3.jpg")
-
-
-# image0.show()
-
-# this function for new marvel game
-def new_round():
+def new_round(): # this function for new marvel game
     guesses = []
     correct_guesses = 0
     question_num = 1
@@ -32,31 +24,24 @@ def check_marvel_answer(answer, guess):
 
     if answer == guess:
         print("CORRECT!")
-        # return 1
+        
         if answer == "D":
-            print('correct one')
-            image0 = Image.open("image0.jpg")
-            image0.show()
+            image3 = Image.open("image3.jpg")
+            image3.show()
+      
             return 1
         elif answer == "C":
-            print('correct two')
-            image0 = Image.open("image0.jpg")
-            image0.show()
-
+            image2 = Image.open("image2.jpg")
+            image2.show()
             return 1
         elif answer == "B":
-            print('correct Three')               
-            image0 = Image.open("image0.jpg")
-            image0.show()
-
+            image1 = Image.open("image1.jpg")
+            image1.show()
             return 1
         else:
-            print('corren four')
             image0 = Image.open("image0.jpg")
             image0.show()
-
-            return 1
-   
+            return 1   
     else:
         print("WRONG!")
         return 0
@@ -79,6 +64,29 @@ def display_percent_score(correct_guesses, guesses):
 
     score = int((correct_guesses/len(questions))*100)
     print("Your score is: "+str(score)+"%")
+    if correct_guesses == 1:
+        twen = Image.open("20.jpg")
+        time.sleep(2)
+        twen.show()
+    elif correct_guesses == 2:
+        forty = Image.open("40.jpg")
+        time.sleep(2)
+        forty.show()
+    elif correct_guesses == 3:
+        sixty = Image.open("60.jpg")
+        time.sleep(2)
+        sixty.show()
+    elif correct_guesses == 4:
+        eigthy = Image.open("80.jpg")
+        time.sleep(2)
+        eigthy.show()
+    elif correct_guesses == 5:
+        perfect = Image.open("80.jpg")
+        time.sleep(2)
+        perfect.show()                 
+    else:
+        zero = Image.open("00.jpg")
+        zero.show()    
 
 # this fuction will ask the player if you will play again
 def new_game():
@@ -97,11 +105,13 @@ questions = {
 "This character played by Tom Holland? ": "C",
 "who's the richest character in Marvel'? ": "B",
 "He's a disfigured mercenary with the superhuman ability of regeneration and physical prowess? ": "A",
+"tesslkdflksdfj": "B",
 }
 
 
 options = [["A. Wolverine", "B. Spider-Man","C. Thor", "D. Hulk"],
           ["A. Captain America", "B. Daredevil","C. Spider-Man.", "D. Punisher"],
+          ["A. Nightcrawler", "B. Iron Man","C. Ice Man", "D. Colossus"],
           ["A. Nightcrawler", "B. Iron Man","C. Ice Man", "D. Colossus"],
           ["A. Deadpool", "B. Spider-Man","C. Silver Surfer", "D. Gambit"]]
 
