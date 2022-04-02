@@ -6,9 +6,9 @@ questions = {
 "tesslkdflksdfj": "B",
 }
 
-dog = (10000000)
 options = [["A. Wolverine", "B. Spider-Man","C. Thor", "D. Hulk"],
           ["A. Captain America", "B. Daredevil","C. Spider-Man.", "D. Punisher"],
           ["A. Nightcrawler", "B. Iron Man","C. Ice Man", "D. Colossus"],
           ["A. Nightcrawler", "B. Iron Man","C. Ice Man", "D. Colossus"],
           ["A. Deadpool", "B. Spider-Man","C. Silver Surfer", "D. Gambit"]]
+          
