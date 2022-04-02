@@ -26,20 +26,20 @@ def check_marvel_answer(answer, guess):
         print("CORRECT!")
         
         if answer == "D":
-            image3 = Image.open("image3.jpg")
+            image3 = Image.open("img/image3.jpg")
             image3.show()
       
             return 1
         elif answer == "C":
-            image2 = Image.open("image2.jpg")
+            image2 = Image.open("img/image2.jpg")
             image2.show()
             return 1
         elif answer == "B":
-            image1 = Image.open("image1.jpg")
+            image1 = Image.open("img/image1.jpg")
             image1.show()
             return 1
         else:
-            image0 = Image.open("image0.jpg")
+            image0 = Image.open("img/image0.jpg")
             image0.show()
             return 1   
     else:
@@ -65,27 +65,27 @@ def display_percent_score(correct_guesses, guesses):
     score = int((correct_guesses/len(questions))*100)
     print("Your score is: "+str(score)+"%")
     if correct_guesses == 1:
-        twen = Image.open("20.jpg")
+        twen = Image.open("img/20.jpg")
         time.sleep(2)
         twen.show()
     elif correct_guesses == 2:
-        forty = Image.open("40.jpg")
+        forty = Image.open("img/40.jpg")
         time.sleep(2)
         forty.show()
     elif correct_guesses == 3:
-        sixty = Image.open("60.jpg")
+        sixty = Image.open("img/60.jpg")
         time.sleep(2)
         sixty.show()
     elif correct_guesses == 4:
-        eigthy = Image.open("80.jpg")
+        eigthy = Image.open("img/80.jpg")
         time.sleep(2)
         eigthy.show()
     elif correct_guesses == 5:
-        perfect = Image.open("80.jpg")
+        perfect = Image.open("img/80.jpg")
         time.sleep(2)
         perfect.show()                 
     else:
-        zero = Image.open("00.jpg")
+        zero = Image.open("img/00.jpg")
         zero.show()    
 
 # this fuction will ask the player if you will play again
