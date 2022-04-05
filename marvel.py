@@ -1,3 +1,5 @@
+from tkinter import N
+from unittest import result
 from gameComponents import gameQuestions, design
 from PIL import Image
 import time, os
@@ -28,8 +30,8 @@ def new_round(): # this function for new marvel game
 def check_marvel_answer(answer, guess):
 
     if answer == guess:
-        # print("CORRECT!")
         
+        # print("CORRECT!")        
         if answer == "D":
             image3 = Image.open("img/image3.jpg")
             image3.show()
@@ -43,36 +45,33 @@ def check_marvel_answer(answer, guess):
             image1 = Image.open("img/image1.jpg")
             image1.show()
             return 1
-        else:
+        else :
             image0 = Image.open("img/image0.jpg")
             image0.show()
             return 1   
     else:
-        # print("WRONG!")
         return 0
 
 # this function will show the scores
 def display_percent_score(correct_guesses, guesses):
     cls()
     print(design.marvel)
-    time.sleep(.5)
     print(design.guessingGame)
-    time.sleep(.5)
-    print("-------------------------")
-    print("RESULTS")
-    print("-------------------------")
-    print("Answers: ", end="")
+    print(design.resutText)
+    print("                                 Answers: ", end="")
     for i in gameQuestions.questions:
         print(gameQuestions.questions.get(i), end=" ")
     print()
 
-    print("Guesses: ", end="")
+    print("                                 Guesses: ", end="")
     for i in guesses:
         print(i, end=" ")
     print()
 
     score = int((correct_guesses/len(gameQuestions.questions))*100)
     print("Your score is: "+str(score)+"%")
+    print("You guessed "+str(correct_guesses)+"/5")
+    print('')
     if correct_guesses == 1:
         twen = Image.open("img/20.jpg")
         twen.show()
@@ -86,7 +85,7 @@ def display_percent_score(correct_guesses, guesses):
         eigthy = Image.open("img/80.jpg")
         eigthy.show()
     elif correct_guesses == 5:
-        perfect = Image.open("img/80.jpg")
+        perfect = Image.open("img/100.jpg")
         perfect.show()                 
     else:
         zero = Image.open("img/00.jpg")
@@ -94,7 +93,7 @@ def display_percent_score(correct_guesses, guesses):
 
 # this fuction will ask the player if you will play again
 def new_game():
-    response = input("Do you want to play again? (yes or no): ")
+    response = input("Press (Yes) to play again, Any key to quit\n")
     response = response.upper()
     if response == "YES":
         return True
@@ -104,7 +103,8 @@ new_round()
 
 while new_game(): # This fucntion for a new game
     new_round()
-
-print("Byeeeeee!")
-
+cls()
+print(design.marvel)
+print(design.guessingGame)
+print(design.exitText)
 
