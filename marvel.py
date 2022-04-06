@@ -1,5 +1,3 @@
-from tkinter import N
-from unittest import result
 from gameComponents import gameQuestions, design
 from PIL import Image
 import time, os
