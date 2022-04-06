@@ -1,3 +1,5 @@
+![notepad](https://user-images.githubusercontent.com/97711003/161876452-40a4821f-d947-4b74-9759-1e3b43b02dbe.jpg)
+
 # Marvel-Game
 Marvel Guessing Game
 
@@ -8,8 +10,7 @@ A guessing game where you ask guestions and you will determine which margel hero
 
 
 ### Project Roadmap File
-[Project roadmap Google Doc link 
-
+https://docs.google.com/document/d/1GORlYDqU5O28_YiJGVR3D0HE_nLO2AkA5lvMBAxbCgk/edit#heading=h.67pf17joe6xo
 #### MIT License
 
 Copyright 2022 Jerome Fernandez
