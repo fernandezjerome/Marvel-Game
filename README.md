@@ -1,14 +1,15 @@
+<img src="img/guessing-game.jpg" alt="marvel">
 # Marvel-Game
 Marvel Guessing Game
 
 
 ## Marvel Guessing Game
 
-A guessing game where you ask guestions and you will determine which margel hero. The end of the game shows how many percentage did you guess.
+A guessing game where you ask guestions and you will determine which margel character. The end of the game shows how many percentage did you guess.
 
 
 ### Project Roadmap File
-[Project roadmap Google Doc link 
+https://docs.google.com/document/d/1GORlYDqU5O28_YiJGVR3D0HE_nLO2AkA5lvMBAxbCgk/edit#heading=h.67pf17joe6xo
 
 #### MIT License
 
