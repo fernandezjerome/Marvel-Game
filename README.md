@@ -1,4 +1,4 @@
-<img src="img/guessing-game.jpg" alt="marvel">
+
 # Marvel-Game
 Marvel Guessing Game
 
