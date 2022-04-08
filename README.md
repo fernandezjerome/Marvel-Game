@@ -4,8 +4,10 @@ Marvel Guessing Game
 
 
 ## Marvel Guessing Game
-
 A guessing game where you ask guestions and you will determine which margel character. The end of the game shows how many percentage did you guess.
+
+## Sample Screenshot
+<img src="img/example.jpg" alt="screenshot">
 
 
 ### Project Roadmap File
