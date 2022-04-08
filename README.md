@@ -1,3 +1,4 @@
+<img src="img/guessing-game.jpg" alt="wallpaper">
 
 # Marvel-Game
 Marvel Guessing Game
